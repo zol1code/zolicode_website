@@ -18,7 +18,28 @@
         nav a:hover { color: #007bff; }
 
         /* Seção Principal (Hero) */
-        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 0 20px; }
+        .hero /* Seção Principal com Foto de Fundo */
+.hero { 
+    height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    
+    /* Substitua 'sua-foto-fundo.jpg' pelo nome do seu arquivo */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('homefundo.jpg'); 
+    
+    background-size: cover; /* Faz a foto cobrir tudo */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Opcional: dá um efeito 'parallax' elegante ao rolar */
+    
+    color: #fff; /* Muda a cor do texto para branco para ler melhor sobre a foto */
+    padding: 0 20px; 
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+.hero p { font-size: 1.3rem; max-width: 600px; margin-bottom: 2rem; text-shadow: 1px 1px 5px rgba(0,0,0,0.5); }
         .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
         .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem; }
         .btn { background: #007bff; color: #fff; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; }
