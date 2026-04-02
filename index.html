@@ -73,17 +73,53 @@
     }
     .btn:hover { background: #0056b3; }
 
-    /* Portfolio */
-    section { padding: 100px 10%; text-align: center; }
-    h2 { font-size: 2.5rem; margin-bottom: 30px; }
-    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-    .card {
-      height: 250px;
-      border-radius: 10px;
-      transition: transform 0.3s;
+    /* Portfolio / Services */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .service-card {
+      background: #f9f9f9;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      text-align: center;
+      border: 1px solid #eee;
+      transition: all 0.3s;
       cursor: pointer;
     }
-    .card:hover { transform: translateY(-10px); }
+    .service-card:hover {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2), 0 0 20px #001f4d;
+      transform: translateY(-5px);
+    }
+    .service-card img { width: 100%; height: 200px; object-fit: cover; }
+    .service-card h3 { color: #000; font-size: 1.5rem; margin-bottom: 15px; }
+    .service-card p { color: #000; font-size: 0.95rem; line-height: 1.6; text-align: justify; }
+
+    /* Contact */
+    .contact-container { display: flex; align-items: stretch; justify-content: space-between; gap: 50px; flex-wrap: wrap; }
+    .contact-form input, .contact-form textarea {
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+      width: 100%;
+    }
+    .contact-form button {
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      background-color: #0019ff;
+      color: #fff;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .contact-form button:hover { background: #0056b3; }
+    .divider { width: 6px; background-color: #0019ff; border-radius: 10px; align-self: stretch; }
 
     /* Footer */
     footer {
@@ -95,23 +131,17 @@
 
     /* Mobile */
     @media (max-width: 768px) {
-      .hero {
-        height: auto;
-        min-height: 100vh;
-        justify-content: flex-start;
-        background-size: cover;
-        background-position: center top;
-        background-attachment: scroll;
-        padding: 60px 20px;
-      }
+      .hero { height: auto; min-height: 100vh; justify-content: flex-start; padding: 60px 20px; background-attachment: scroll; }
       .hero h1 { font-size: 2rem; }
       .hero h2 { font-size: 1.2rem; }
       .btn { font-size: 0.9rem; padding: 10px 25px; margin-top: 15px; }
+      .contact-container { flex-direction: column; gap: 30px; }
     }
   </style>
 </head>
 
 <body>
+  <!-- Header -->
   <header>
     <div class="logo"><img src="zolicode.png" alt="Zoli Code"></div>
     <nav style="display: flex; align-items: center; gap: 30px;">
@@ -124,22 +154,71 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section id="home" class="hero">
     <h1>Digital Innovation for Your Business</h1>
     <h2>Professional Web Design & Development Services and Marketing<br>for Businesses of All Sizes in Ireland.</h2>
     <a href="#portfolio" class="btn">Get to know our work</a>
   </section>
 
-  <!-- Portfolio Section -->
+  <!-- Services / Portfolio -->
   <section id="portfolio" style="background-color: #ffffff;">
     <h2>Our Services</h2>
     <p>Specialized solutions to scale your business.</p>
     <div class="portfolio-grid">
-      <!-- Exemplo de cards -->
-      <div class="card" style="background:#f9f9f9;"><h3>Web Development</h3></div>
-      <div class="card" style="background:#f9f9f9;"><h3>App Development</h3></div>
-      <div class="card" style="background:#f9f9f9;"><h3>Social Media Marketing</h3></div>
+      <div class="service-card">
+        <img src="webdevelopment.png" alt="Web Development">
+        <div style="padding: 30px;">
+          <h3>Web Development</h3>
+          <p>We develop robust, secure, and high-performance websites that convert visitors into customers.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="appdevelopment.png" alt="App Development">
+        <div style="padding: 30px;">
+          <h3>App Development</h3>
+          <p>Custom mobile and web apps designed to scale with intuitive interfaces and high performance.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="socialmedia.png" alt="Social Media Marketing">
+        <div style="padding: 30px;">
+          <h3>Social Media Marketing</h3>
+          <p>We create data-driven campaigns on platforms like Facebook, Instagram, X (Twitter), and LinkedIn to boost engagement and conversions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contato" style="background-color: #ffffff;">
+    <div class="contact-container">
+      <!-- Form -->
+      <div style="flex: 1; min-width: 300px;">
+        <h2>Contact Us</h2>
+        <p>Write us a message about your project idea!</p>
+        <form action="https://formspree.io/f/mkorkgvw" method="POST" class="contact-form" style="display: flex; flex-direction: column; gap: 15px;">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="tel" name="phone" placeholder="Phone" required>
+          <input type="email" name="_replyto" placeholder="your@mail.com" required>
+          <textarea name="message" rows="4" placeholder="How can we help?" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Social -->
+      <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding-left: 20px;">
+        <h3>Follow our networks</h3>
+        <p>Stay tuned for our latest news and digital innovations.</p>
+        <div style="display: flex; gap: 30px; align-items: center; flex-wrap: wrap;">
+          <a href="https://wa.me/3530838423515" target="_blank" style="color: #000; font-size: 3.5rem;" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://instagram.com/zolicode" target="_blank" style="color: #000; font-size: 3.5rem;" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7422783139049103360" target="_blank" style="color: #000; font-size: 3.5rem;" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:zolicode@outlook.com" style="color: #000; font-size: 3.5rem;" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
     </div>
   </section>
 
