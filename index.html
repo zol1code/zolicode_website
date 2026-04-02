@@ -60,9 +60,10 @@ nav a:hover {
   .hero {
     height: auto;
     min-height: 100vh;
-    background-size: contain;
+    background-size: cover;  /* <- muda de contain para cover */
     background-position: center top;
-    background-attachment: scroll;
+    background-repeat: no-repeat; /* garante que não repita */
+    background-attachment: scroll; /* ou remove, mobile nem suporta fixed direito */
     padding: 60px 20px;
   }
 }
