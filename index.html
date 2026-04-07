@@ -243,6 +243,7 @@
     <nav>
       <a href="#home">Home</a>
       <a href="#portfolio">Services</a>
+      <a href="#portfolio-projects">Portfolio</a>
       <a href="#contato">Contact</a>
       <a href="mailto:zolicode@outlook.com" class="email-link">
         <img src="novo-email.png" alt="Email"> zolicode@outlook.com
@@ -288,7 +289,60 @@
       </div>
     </div>
   </section>
+  
+  <section id="portfolio-projects" style="background:#f9f9f9; padding:100px 10%; text-align:center;">
 
+  <h2>Our Portfolio</h2>
+  <p>Some of our recent projects.</p>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:30px; margin-top:40px;">
+
+    <div class="service-card">
+      <img src="projeto1.png">
+      <div style="padding:20px;">
+        <h3>Project One</h3>
+        <a href="#" class="btn">Visit Project</a>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="projeto2.png">
+      <div style="padding:20px;">
+        <h3>Project Two</h3>
+        <a href="#" class="btn">Visit Project</a>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="projeto3.png">
+      <div style="padding:20px;">
+        <h3>Project Three</h3>
+        <a href="#" class="btn">Visit Project</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:80px; text-align:left;">
+    <h2>Client Feedback</h2>
+
+    <div style="margin-top:20px;">
+      <p><strong>John:</strong> Amazing service, highly recommend!</p>
+      <p><strong>Maria:</strong> My website looks incredible now.</p>
+    </div>
+
+    <form action="https://formspree.io/f/mkorkgvw" method="POST" style="margin-top:30px; display:flex; flex-direction:column; gap:15px; max-width:400px;">
+      
+      <input type="text" name="name" placeholder="Your name" required>
+      <textarea name="message" placeholder="Your feedback" required></textarea>
+
+      <button type="submit" class="btn">Send Feedback</button>
+    </form>
+
+  </div>
+
+</section>
+  
   <!-- Contact -->
   <section id="contato" style="background-color: #ffffff; padding: 100px 10%;">
     <div class="contact-container">
