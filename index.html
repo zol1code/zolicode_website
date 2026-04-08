@@ -368,22 +368,29 @@ background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('fundo2.jpeg'
 </div>
 
 </div>
+    
    <div style="margin-top:80px; text-align:left;">
     <h2 style="color: white;">Leave your Feedback:</h2>
    </div>
-    <form action="https://formspree.io/f/mkorkgvw" method="POST" style="margin-top:30px; max-width:400px; display:flex; flex-direction:column; gap:20px; background:#fff; padding:30px; border-radius:15px; box-shadow:0 10px 25px rgba(0,0,0,0.08);">
+    
+ <div style="display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start; justify-content:center; margin-top:40px;">
 
-  <input type="text" name="name" placeholder="Your Name" required
-         style="padding:12px 15px; border-radius:10px; border:1px solid #ccc; font-size:0.95rem; outline:none; transition:0.3s;">
+  <!-- Formulário -->
+  <form action="https://formspree.io/f/mkorkgvw" method="POST"
+        style="flex:0 0 400px; display:flex; flex-direction:column; gap:20px; background:#fff; padding:30px; border-radius:15px; box-shadow:0 10px 25px rgba(0,0,0,0.08);">
 
-  <textarea name="message" placeholder="Your Feedback" required rows="4"
-            style="padding:12px 15px; border-radius:10px; border:1px solid #ccc; font-size:0.95rem; outline:none; transition:0.3s; resize:none;"></textarea>
+    <input type="text" name="name" placeholder="Your Name" required
+           style="padding:12px 15px; border-radius:10px; border:1px solid #ccc; font-size:0.95rem; outline:none; transition:0.3s;">
+    
+    <textarea name="message" placeholder="Your Feedback" required rows="4"
+              style="padding:12px 15px; border-radius:10px; border:1px solid #ccc; font-size:0.95rem; outline:none; transition:0.3s; resize:none;"></textarea>
+    
+    <button type="submit" class="btn" style="padding:12px; border-radius:10px; font-weight:bold; font-size:1rem; border:none; background:#0019ff; color:#fff; cursor:pointer; transition:0.3s;">
+      Send Feedback
+    </button>
 
-  <button type="submit" class="btn" style="padding:12px; border-radius:10px; font-weight:bold; font-size:1rem; border:none; background:#0019ff; color:#fff; cursor:pointer; transition:0.3s;">
-    Send Feedback
-  </button>
+  </form>
 
-</form>
   <!-- Imagem ao lado -->
   <div style="flex:0 0 400px; display:flex; justify-content:center; align-items:center;">
     <img src="feedback.png" alt="Imagem Feedback" style="width:100%; max-height:400px; object-fit:cover; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1);">
