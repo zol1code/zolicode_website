@@ -391,19 +391,32 @@ style="padding:100px 10%; text-align:center; background:#0a0a0a;">
 
   <!-- Formulário (lado esquerdo) -->
   <form action="https://formspree.io/f/mkorkgvw" method="POST"
-        style="flex:0 0 400px; display:flex; flex-direction:column; gap:20px; background:#fff; padding:30px; border-radius:15px; box-shadow:0 10px 25px rgba(0,0,0,0.08);">
+  style="
+    width:100%;
+    max-width:400px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    box-sizing:border-box;
+  ">
 
-    <input type="text" name="name" placeholder="Your Name" required
-           style="padding:12px 15px; border-radius:10px; border:1px solid #ccc; font-size:0.95rem; outline:none; transition:0.3s;">
-    
-    <textarea name="message" placeholder="Your Feedback" required rows="4"
-              style="padding:12px 15px; border-radius:10px; border:1px solid #ccc; font-size:0.95rem; outline:none; transition:0.3s; resize:none;"></textarea>
-    
-    <button type="submit" class="btn" style="padding:12px; border-radius:10px; font-weight:bold; font-size:1rem; border:none; background:#1D106E; color:#fff; cursor:pointer; transition:0.3s;">
-      Send Feedback
-    </button>
+  <input type="text" name="name" placeholder="Your Name" required
+    style="width:100%; padding:12px 15px; border-radius:10px; border:1px solid #ccc; font-size:0.95rem; outline:none;">
 
-  </form>
+  <textarea name="message" placeholder="Your Feedback" required rows="4"
+    style="width:100%; padding:12px 15px; border-radius:10px; border:1px solid #ccc; font-size:0.95rem; outline:none; resize:none;"></textarea>
+
+  <button type="submit"
+    style="width:100%; padding:12px; border-radius:10px; font-weight:bold; font-size:1rem; border:none; background:#1D106E; color:#fff; cursor:pointer;">
+    Send Feedback
+  </button>
+
+</form>
 
 </div>
 
