@@ -286,6 +286,20 @@
     margin: 0;
   }
 }
+/* banner 2 */
+@media (max-width: 768px) {
+
+  section {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  section h2 {
+    text-align: center !important;
+    font-size: 1.4rem !important;
+  }
+
+}
   </style>
 </head>
 
@@ -370,18 +384,24 @@
   </section>
 
    <!-- banner 2 -->
- <section style="
-  padding:30px 15px;
+<section style="
+  padding:30px 10%;
   background:#0b0f19;
   color:#e5e7eb;
-  text-align:center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
 ">
 
+  <!-- TEXTO (ESQUERDA) -->
   <h2 style="
-    font-size:1.6rem;
+    font-size:1.8rem;
     font-weight:500;
     line-height:1.4;
-    margin-bottom:10px;
+    margin:0;
+    text-align:left;
   ">
     Helping small businesses get found on 
     <span style="
@@ -391,14 +411,17 @@
     ">
       Google
     </span>
+    and increase their sales
   </h2>
 
-  <p style="font-size:1rem; margin-bottom:15px;">
-    And increase their sales with modern digital solutions
-  </p>
-
+  <!-- IMAGEM (DIREITA) -->
   <img src="IMG_4719.png" alt="growth" 
-       style="max-width:120px; width:100%; height:auto; opacity:0.9;">
+       style="
+         max-width:140px;
+         width:100%;
+         height:auto;
+         opacity:0.9;
+       ">
 
 </section>
   
