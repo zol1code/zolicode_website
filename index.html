@@ -233,59 +233,6 @@
       }
     }
 
-    /* MOBILE (banner) */
-.google-section {
-  padding: 20px 15px;
-  text-align: center;
-  background: #1D106E;
-  color: #e5e7eb;
-}
-
-.google-section h2 {
-  font-size: 1.4rem;
-  font-weight: 500;
-  line-height: 1.4;
-  max-width: 520px;
-  margin: 0 auto 10px;
-}
-
-.google-section img {
-  max-width: 140px;
-  width: 100%;
-  margin: 0 auto;
-  display: block;
-  opacity: 0.9;
-}
-
-/* TEXTO GOOGLE COLORIDO */
-.google-text {
-  background: linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* DESKTOP */
-@media (min-width: 768px) {
-
-  .google-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    padding: 40px 10%;
-  }
-
-  .google-section h2 {
-    font-size: 2.2rem; /* texto maior */
-    max-width: 700px;
-    margin: 0;
-  }
-
-  .google-section img {
-    max-width: 250px;
-    margin: 0;
-  }
-}
 /* banner 2 */
 @media (max-width: 768px) {
 
@@ -336,15 +283,44 @@
   </section>
   
 <!-- Banner1 -->
-<section class="google-section">
-    
-  <h2>
+<section style="
+  padding:30px 10%;
+  background:#0b0f19;
+  color:#e5e7eb;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+">
+
+  <!-- TEXTO (ESQUERDA) -->
+  <h2 style="
+    font-size:1.8rem;
+    font-weight:500;
+    line-height:1.4;
+    margin:0;
+    text-align:left;
+  ">
     Helping small businesses get found on 
-    <span class="google-text">Google</span>
+    <span style="
+      background: linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    ">
+      Google
+    </span>
     and increase their sales
   </h2>
 
-  <img src="IMG_4719.png" alt="growth">
+  <!-- IMAGEM (DIREITA) -->
+  <img src="IMG_4719.png" alt="growth" 
+       style="
+         max-width:140px;
+         width:100%;
+         height:auto;
+         opacity:0.9;
+       ">
 
 </section>
 
