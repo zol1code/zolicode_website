@@ -819,43 +819,38 @@ style="padding:100px 10%; text-align:center; background:#0a0a0a;">
 </a>
 
 
-<!-- POPUP FORM -->
+<!-- BOTÃO -->
+<a href="#contact-form" 
+   style="position:fixed; bottom:20px; right:20px; background:#0019ff; color:#fff; padding:15px 18px; border-radius:50px; text-decoration:none; z-index:999;">
+   Contact
+</a>
+
+<!-- FORM -->
 <div id="contact-form" 
      style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); display:none; z-index:1000;">
 
-  <div style="background:#fff; max-width:400px; margin:100px auto; padding:25px; border-radius:15px; position:relative;">
+  <div style="background:#fff; max-width:400px; margin:100px auto; padding:25px; border-radius:15px;">
 
-    <!-- BOTÃO FECHAR -->
-    <a href="#" style="position:absolute; top:10px; right:15px; text-decoration:none; font-size:20px;">✖</a>
+    <a href="#" style="float:right; text-decoration:none;">✖</a>
 
-    <h3 style="margin-bottom:15px;">Contact Us</h3>
+    <h3>Contact</h3>
 
-    <form action="https://formspree.io/f/mkorkgvw" method="POST" style="display:flex; flex-direction:column; gap:10px;">
+    <form action="https://formspree.io/f/mkorkgvw" method="POST">
 
-      <input type="text" name="name" placeholder="Your Name" required 
-             style="padding:10px; border-radius:8px; border:1px solid #ccc;">
+      <input type="text" name="name" placeholder="Name" required style="width:100%; margin-bottom:10px;">
+      <input type="email" name="email" placeholder="Email" required style="width:100%; margin-bottom:10px;">
+      <textarea name="message" placeholder="Message" required style="width:100%; margin-bottom:10px;"></textarea>
 
-      <input type="email" name="email" placeholder="Your Email" required 
-             style="padding:10px; border-radius:8px; border:1px solid #ccc;">
-
-      <textarea name="message" placeholder="Your Message" required 
-                style="padding:10px; border-radius:8px; border:1px solid #ccc;"></textarea>
-
-      <button type="submit" 
-              style="background:#0019ff; color:#fff; border:none; padding:10px; border-radius:8px;">
-        Send
-      </button>
+      <button type="submit">Send</button>
 
     </form>
 
   </div>
 </div>
 
-
-<!-- CSS HACK -->
 <style>
 #contact-form:target {
-  display: block;
+  display: block !important;
 }
 </style>
 
